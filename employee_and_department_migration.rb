@@ -7,6 +7,7 @@ class EmployeeAndDepartmentMigration < ActiveRecord::Migration
       t.string :email
       t.integer :phone
       t.integer :salary
+      t.string :review 
       t.timestamps
     end
 
@@ -14,7 +15,9 @@ class EmployeeAndDepartmentMigration < ActiveRecord::Migration
       t.string :name
       t.string :salary
       t.integer :employee_id
+      t.integer :staff
       t.timestamps
     end
+
   end
 end
