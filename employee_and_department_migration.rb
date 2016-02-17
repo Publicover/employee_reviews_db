@@ -7,8 +7,8 @@ class EmployeeAndDepartmentMigration < ActiveRecord::Migration
       t.string :email
       t.integer :phone
       t.integer :salary
-      t.string :review 
-      t.timestamps
+      t.string :review
+      t.timestamps null: false
     end
 
     create_table :departments do |t|
@@ -16,7 +16,7 @@ class EmployeeAndDepartmentMigration < ActiveRecord::Migration
       t.string :salary
       t.integer :employee_id
       t.integer :staff
-      t.timestamps
+      t.timestamps null: false
     end
 
   end
