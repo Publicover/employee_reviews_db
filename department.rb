@@ -17,7 +17,7 @@ class Department < ActiveRecord::Base
   end
 
   def department_raise(alloted_amount)
-    raise_eligible = self.staff.select {|e| yield(e)}
+    raise_eligible = employees.select {|e| yield(e)}
     amount = alloted_amount / raise_eligible.length
     raise_eligible.each {|e| e.raise_by_amount(amount)}
   end

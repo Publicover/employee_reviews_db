@@ -6,9 +6,9 @@ class EmployeeAndDepartmentMigration < ActiveRecord::Migration
       t.string :name
       t.string :email
       t.integer :phone
-      t.integer :salary
+      t.decimal :salary, precision: 8, scale: 2
       t.string :review
-      t.integer :satisfactory
+      t.boolean :satisfactory
       t.timestamps null: false
     end
 
