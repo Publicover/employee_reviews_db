@@ -8,6 +8,7 @@ class EmployeeAndDepartmentMigration < ActiveRecord::Migration
       t.integer :phone
       t.integer :salary
       t.string :review
+      t.integer :satisfactory
       t.timestamps null: false
     end
 
